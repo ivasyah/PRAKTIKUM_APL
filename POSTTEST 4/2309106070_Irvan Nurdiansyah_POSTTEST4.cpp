@@ -15,22 +15,22 @@ void tambah_barang(std::vector<Barang>& gudang_barang) {
     Barang barang;
     while (true) {
         std::cout << "Masukkan nama barang: ";
-        std::cin.ignore(); // Ignore the newline character left in the input buffer
+        std::cin.ignore(); 
         std::getline(std::cin, barang.nama);
 
         std::cout << "Masukkan harga barang: ";
         if (!(std::cin >> barang.harga)) {
             std::cout << "Input harga tidak valid. Harap masukkan angka.\n";
-            std::cin.clear(); // Clear error flags
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore the rest of the input
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
             continue;
         }
 
         std::cout << "Masukkan stok barang: ";
         if (!(std::cin >> barang.stok)) {
             std::cout << "Input stok tidak valid. Harap masukkan angka.\n";
-            std::cin.clear(); // Clear error flags
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore the rest of the input
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
             continue;
         }
 
